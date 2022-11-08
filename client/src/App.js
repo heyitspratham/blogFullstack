@@ -6,7 +6,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -17,7 +17,7 @@ import "./index.css"
 const Layout = ()=>{
   return(
     <>
-      <Header/>
+      <Navbar/>
       <Outlet/>
       <Footer/>
     </>
@@ -56,8 +56,8 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="app">
-      <div className="container">
+    <div className="  flex justify-center">
+      <div className="h-screen w-[1024px] ">
         <RouterProvider router={router} />
       </div>
     </div>
