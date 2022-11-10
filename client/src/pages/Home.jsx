@@ -32,16 +32,16 @@ const Home = () => {
   return (
     <div className='mt-36 flex flex-col gap-36'>
       {posts.map((post)=>(
-        <div className="flex odd:flex-row-reverse " key={post.id} >
+        <div className="flex odd:flex-row-reverse gap-5 " key={post.id} >
           <div className="image flex-[1] relative before:absolute before:bg-main before:w-full before:h-full before:-left-5 before:top-5 before:z-[-1]  ">
             <img className='w-full h-[400px] object-cover '  src={post.img} alt="" />
           </div>
-          <div className="content flex-[2]">
+          <div className="content flex-[2] flex flex-col justify-between">
             <Link to={`/post/${post.id}`} >
               <h1 className='text-5xl font-bold' >{post.title}</h1>
             </Link>
-            <p>{post.desc}</p>
-            <button>Read More</button>
+            <p className='text-lg' >{post.desc}</p>
+            <button className='w-max px-3 bg-white py-3 border-[1px] text-teal-500 border-teal-500 hover:bg-main hover:text-black hover:border-white'>Read More</button>
           </div>
         </div>
       ))}
